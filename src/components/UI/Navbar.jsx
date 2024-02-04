@@ -1,23 +1,21 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
+import {Link, useLocation} from 'react-router-dom';
 function OffcanvasExample() {
     const expand="sm";
     const priority = {
         zIndex: 9999,
         width: "100%",
       };
+      const currentPage= useLocation().pathname;
   return (
     <>
         <Navbar fixed="top" style={priority}
         key={expand} expand={expand} className="bg-body-tertiary mb-3">
           <Container fluid>
-            <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+            <Navbar.Brand href="#">Stretch Spelmans Portfolio</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -31,31 +29,30 @@ function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
-                  <NavDropdown
-                    title="Dropdown"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  
+                <Link to="/"
+                  className={currentPage === '/' ? 'nav-link active': 'nav-link'}
                   >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                    Home
+                  </Link>
+
+                  <Link to="/AboutPage"
+                  className={currentPage === '/AboutPage' ? 'nav-link active': 'nav-link'}
+                  >
+                    About Me
+                  </Link>
+
+                  <Link to="/ContactPage"
+                  className={currentPage === '/ContactPage' ? 'nav-link active': 'nav-link'}
+                  >Contact Me</Link>
+
+                  <Link to="/PortfolioPage"
+                  className={currentPage === '/PortfolioPage' ? 'nav-link active': 'nav-link'}>Portfolio</Link>
+
+                  <Link to="/ResumePage"
+                  className={currentPage === '/ResumePage' ? 'nav-link active': 'nav-link'}>Resume</Link>
+
                 </Nav>
-                <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
-                </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

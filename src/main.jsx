@@ -8,8 +8,10 @@ import "./index.css";
 import App from "./App";
 import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/HomePage";
-
-
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import PortfolioPage from "./pages/PortfolioPage"
+import ResumePage from "./pages/ResumePage"
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,22 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path:'AboutPage',
+        element: <AboutPage />
+      },
+      {
+        path:'Contactpage',
+        element: <ContactPage />
+      },
+      {
+        path:'PortfolioPage',
+        element: <PortfolioPage />
+      },
+      {
+        path:'ResumePage',
+        element: <ResumePage />
       }
      
     ]
