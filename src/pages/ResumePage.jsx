@@ -1,33 +1,32 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Placeholder from 'react-bootstrap/Placeholder';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 
 export default function ResumePage(){
     return (
         <div className="d-flex justify-content-around">
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-              <Card.Title>To be added soon!</Card.Title>
-              <Card.Text>
-                To be added soon!
-              </Card.Text>
-              <Button variant="primary">To Be added soon!</Button>
+              <Card.Title>Resume</Card.Title>
+              <Button variant="primary" href="https://profile.indeed.com/p/stretchs-lfyxh30">Indeed Resume</Button>
             </Card.Body>
           </Card>
     
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-              <Placeholder as={Card.Title} animation="glow">
-                <Placeholder xs={6} />
-              </Placeholder>
-              <Placeholder as={Card.Text} animation="glow">
-                <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
-                <Placeholder xs={6} /> <Placeholder xs={8} />
-              </Placeholder>
-              <Placeholder.Button variant="primary" xs={6} />
+              <Card.Title>Skills</Card.Title>
+              <ListGroup>
+                <ListGroup.Item>Hard Working</ListGroup.Item>
+                <ListGroup.Item>Kind</ListGroup.Item>
+                <ListGroup.Item>HTML</ListGroup.Item>
+                <ListGroup.Item>CSS</ListGroup.Item>
+                <ListGroup.Item>React</ListGroup.Item>
+                <ListGroup.Item>JavaScript</ListGroup.Item>
+                <ListGroup.Item>Nodejs</ListGroup.Item>
+                <ListGroup.Item>MySql</ListGroup.Item>
+                <ListGroup.Item>MongoDb</ListGroup.Item>
+              </ListGroup>
             </Card.Body>
           </Card>
         </div>
