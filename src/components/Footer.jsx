@@ -5,15 +5,18 @@ import instagramIcon from "../assets/5282544_camera_instagram_social media_socia
 import Icon from "./UI/Icon";
 
 export default function Footer() {
-  const priority = {
-    zIndex: 99,
-  };
+  // const priority = {
+  //   zIndex: 99,
+    
+  // };
   const images = [
-    { image: envelopeIcon, link: "mailto:codingspelman@gmail.com" },
-    { image: githubIcon, link: "https://github.com/StretchSpelman" },
-    { image: linkedinIcon, link: "https://www.linkedin.com/in/stretch-spelman-b254b92b4/" },
-    { image: instagramIcon, link: "https://www.instagram.com/codingspelman/" },
+    { id: 1, image: envelopeIcon, link: "mailto:codingspelman@gmail.com" },
+    { id: 2, image: githubIcon, link: "https://github.com/StretchSpelman" },
+    { id:3,image: linkedinIcon, link: "https://www.linkedin.com/in/stretch-spelman-b254b92b4/" },
+    { id: 4,image: instagramIcon, link: "https://www.instagram.com/codingspelman/" },
   ];
 
-  return <Icon images={images} />;
+  return (
+  <footer><Icon images={images} /></footer>);
+
 }
